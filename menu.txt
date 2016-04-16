@@ -1,0 +1,75 @@
+obj_menu_start:
+
+(This goes for all the obj_menu objects)
+image_index = 0
+image_speed = 0
+
+Step:
+
+if global.start = true{image_index = 1 image_speed = 0}
+if !global.start = true{image_index = 0 image_speed = 0}
+
+obj_menu_help:
+
+Step:
+if global.help = true{image_index = 1 image_speed = 0}
+if !global.help = true{image_index = 0 image_speed = 0}
+
+obj_menu_quit
+
+Step:
+
+if global.quit = true{image_index = 1 image_speed = 0}
+if !global.quit = true{image_index = 0 image_speed = 0}
+
+Obj_menu_control:
+
+Create: 
+
+global.start = true
+global.help = false
+global.quit = false
+
+Step:
+
+if keyboard_check_pressed(vk_down) and global.start = true
+{
+global.start = false
+global.help = true
+}
+
+else if keyboard_check_pressed(vk_up) and global.start = true
+{
+global.start = false
+global.quit = true
+}
+
+else if keyboard_check_pressed(vk_down) and global.help = true
+{
+global.help = false
+global.quit = true
+}
+
+else if keyboard_check_pressed(vk_up) and global.help = true
+{
+global.help = false
+global.start = true
+}
+
+else if keyboard_check_pressed(vk_down) and global.quit = true
+{
+global.quit = false
+global.start = true
+}
+
+else if keyboard_check_pressed(vk_up) and global.quit = true
+{
+global.quit = false
+global.help = true
+}
+
+Keyboard Space:
+
+if global.start = true {room_goto(main)}
+else if global.help = true {show_info()}
+else if global.quit = true {game_end()}
