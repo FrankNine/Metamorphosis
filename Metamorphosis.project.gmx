@@ -5,7 +5,9 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\dream</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -15,11 +17,12 @@
     <object>objects\title_presenter</object>
     <object>objects\dictionary_presenter</object>
     <object>objects\game_presenter</object>
+    <object>objects\pipe_dream</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\game</room>
     <room>rooms\title</room>
     <room>rooms\dictionary</room>
-    <room>rooms\game</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
