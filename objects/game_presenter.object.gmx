@@ -8,6 +8,121 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.dream_desc = "";
+
+description_x = display_get_gui_width() * 0.1;
+description_y = display_get_gui_height() * 0.2;
+
+gate_x = display_get_gui_width() * 0.55;
+gate_y = display_get_gui_height() * 0.3;
+
+board_x_count = 5;
+board_y_count = 5;
+
+for(var c = 0; c &lt; board_x_count; c++;)
+    {
+    for(var r = 0; r &lt; board_y_count; r++;)
+        {
+            array_alive_dream[c, r] = true;
+        }
+    }
+
+dream_x = display_get_gui_width() * 0.05;
+dream_y = display_get_gui_height() * 0.3;
+
+d_truck = instance_create(dream_x + sprite_get_width(gate) * 1, dream_y + sprite_get_width(gate) * 0, pipe_dream);
+d_truck.sprite_index = dream_truck;
+d_truck.description = "I want to be a garbage car driver";
+
+d_super = instance_create(dream_x + sprite_get_width(gate) * 2, dream_y + sprite_get_width(gate) * 0, pipe_dream);
+d_super.sprite_index = dream_super;
+d_super.description = "I want to be superman";
+
+d_twitch = instance_create(dream_x + sprite_get_width(gate) * 3, dream_y + sprite_get_width(gate) * 0, pipe_dream);
+d_twitch.sprite_index = dream_twitch;
+d_twitch.description = "I want to be famous online";
+
+d_basket = instance_create(dream_x + sprite_get_width(gate) * 0, dream_y + sprite_get_width(gate) * 1, pipe_dream);
+d_basket.sprite_index = dream_basket;
+d_basket.description = "I want to play basketball like Jordan";
+
+d_art = instance_create(dream_x + sprite_get_width(gate) * 1, dream_y + sprite_get_width(gate) * 1, pipe_dream);
+d_art.sprite_index = dream_art;
+d_art.description = "I would like to paint";
+
+d_japanese = instance_create(dream_x + sprite_get_width(gate) * 2, dream_y + sprite_get_width(gate) * 1, pipe_dream);
+d_japanese.sprite_index = dream_japanese;
+d_japanese.description = "I would like to speak Japanese";
+
+d_camp = instance_create(dream_x + sprite_get_width(gate) * 4, dream_y + sprite_get_width(gate) * 1, pipe_dream);
+d_camp.sprite_index = dream_camp;
+d_camp.description = "I want to live outdoor";
+
+d_cook = instance_create(dream_x + sprite_get_width(gate) * 0, dream_y + sprite_get_width(gate) * 2, pipe_dream);
+d_cook.sprite_index = dream_cook;
+d_cook.description = "I want to know how to cook";
+
+d_game = instance_create(dream_x + sprite_get_width(gate) * 1, dream_y + sprite_get_width(gate) * 2, pipe_dream);
+d_game.sprite_index = dream_game;
+d_game.description = "I want to play as many games as I want";
+
+d_empty = instance_create(dream_x + sprite_get_width(gate) * 2, dream_y + sprite_get_width(gate) * 2, pipe_dream);
+d_empty.sprite_index = dream_empty;
+d_empty.description = "I don't know what I would like to do";
+
+d_program = instance_create(dream_x + sprite_get_width(gate) * 3, dream_y + sprite_get_width(gate) * 2, pipe_dream);
+d_program.sprite_index = dream_program;
+d_program.description = "I want to learn how to program";
+
+d_swim = instance_create(dream_x + sprite_get_width(gate) * 4, dream_y + sprite_get_width(gate) * 2, pipe_dream);
+d_swim.sprite_index = dream_swim;
+d_swim.description = "I would like to swim";
+
+d_tennis = instance_create(dream_x + sprite_get_width(gate) * 0, dream_y + sprite_get_width(gate) * 3, pipe_dream);
+d_tennis.sprite_index = dream_tennis;
+d_tennis.description = "I want to be as good as Federer";
+
+d_write = instance_create(dream_x + sprite_get_width(gate) * 1, dream_y + sprite_get_width(gate) * 3, pipe_dream);
+d_write.sprite_index = dream_write;
+d_write.description = "I want to write novel";
+
+d_travel = instance_create(dream_x + sprite_get_width(gate) * 1, dream_y + sprite_get_width(gate) * 4, pipe_dream);
+d_travel.sprite_index = dream_travel;
+d_travel.description = "I want to travel around the globe";
+
+d_together = instance_create(dream_x + sprite_get_width(gate) * 2, dream_y + sprite_get_width(gate) * 4, pipe_dream);
+d_together.sprite_index = dream_together;
+d_together.description = "I want to be with her";
+
+d_hangout = instance_create(dream_x + sprite_get_width(gate) * 3, dream_y + sprite_get_width(gate) * 4, pipe_dream);
+d_hangout.sprite_index = dream_hangout;
+d_hangout.description = "I want to hang out with friends";
+
+d_music = instance_create(dream_x + sprite_get_width(gate) * 4, dream_y + sprite_get_width(gate) * 4, pipe_dream);
+d_music.sprite_index = dream_music;
+d_music.description = "I want to compose music";
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -30,10 +145,47 @@
 draw_set_alpha(1);
 
 draw_text_transformed(
-    display_get_gui_width() * 0.1, 
-    display_get_gui_height() * 0.2, 
-    "Game",
+    description_x, 
+    description_y, 
+    global.dream_desc,
     1, 1, 0 );
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+for(var c = 0; c &lt; board_x_count; c++;)
+    {
+    for(var r = 0; r &lt; board_y_count; r++;)
+        {
+            {
+                draw_sprite(gate, 
+                            0, 
+                            gate_x + c * sprite_get_width(gate), 
+                            gate_y + r * sprite_get_height(gate)
+                           );
+            }
+        }
+    }
+    
+    
 </string>
           </argument>
         </arguments>

@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health = 10;
+            <string>d_health = 10;
 
 is_shaking = false;
 shake_duration = 0.3;
@@ -107,13 +107,15 @@ y = original_y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if is_shaking = true
+            <string>global.dream_desc = description;
+
+if is_shaking = true
     {
         return false;
     }
     
-health -= 1;
-if health = 0
+d_health -= 1;
+if d_health = 0
     {
         instance_destroy();
     }
@@ -121,6 +123,7 @@ else
     {
         is_shaking = true;
         alarm[0] = shake_duration * room_speed;
+        show_debug_message(d_health);
     }
 </string>
           </argument>

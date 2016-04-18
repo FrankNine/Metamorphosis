@@ -7,6 +7,25 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\dream</sprite>
+    <sprite>sprites\dream_truck</sprite>
+    <sprite>sprites\gate</sprite>
+    <sprite>sprites\dream_art</sprite>
+    <sprite>sprites\dream_basket</sprite>
+    <sprite>sprites\dream_camp</sprite>
+    <sprite>sprites\dream_cook</sprite>
+    <sprite>sprites\dream_empty</sprite>
+    <sprite>sprites\dream_game</sprite>
+    <sprite>sprites\dream_hangout</sprite>
+    <sprite>sprites\dream_japanese</sprite>
+    <sprite>sprites\dream_music</sprite>
+    <sprite>sprites\dream_program</sprite>
+    <sprite>sprites\dream_super</sprite>
+    <sprite>sprites\dream_swim</sprite>
+    <sprite>sprites\dream_tennis</sprite>
+    <sprite>sprites\dream_together</sprite>
+    <sprite>sprites\dream_travel</sprite>
+    <sprite>sprites\dream_twitch</sprite>
+    <sprite>sprites\dream_write</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
